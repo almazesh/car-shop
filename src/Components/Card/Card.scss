@@ -1,0 +1,89 @@
+.cardLink{
+    color: black;
+}
+
+.card{
+    width: 250px;
+    margin:50px 25px;
+    height: 200px;
+    position: relative;
+    transition: 0.5s;
+    &:hover h4{
+        background-color: white;
+        z-index: 2;
+        opacity: 1;
+        top: 0;
+    }
+    &:hover .vipIcon{
+        transform: translateX(20px) translateY(20px);
+        color: white;
+        z-index: 2;
+    }
+
+    &:hover p{
+        color: white;
+        transform: translateX(20px);
+        position:relative;
+        z-index: 2;
+    }
+    .inCart{
+        position: absolute;
+        top: -20%;
+        width: 100%;
+        transition: 0.2s;
+        text-align: center;
+        opacity: 0;
+        padding: 10px 0;
+    }
+    &:hover{
+        transform: scale(1.05);
+    }
+    &::after{
+        content: '';
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 129%;
+        opacity: 0;
+        background-color: rgba(0,0,0,0.5);
+        cursor: pointer;
+        transition: 0.5s;
+        top: 0;
+    }
+    &:hover::after{
+        content: 'More';
+        position: absolute;
+        width: 100%;
+        height: 129%;
+        opacity: 1;
+        background-color: rgba(0,0,0,0.5);
+        cursor: pointer;
+        top: 0;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: lightgray;
+        bottom: -30%;
+    }
+    img{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    p{
+        transition: 0.2s;
+    }
+    .vipIcon{
+        position: absolute;
+        top: 0;
+        transition: 0.2s;
+    }
+}
+
